@@ -1,4 +1,4 @@
-package com.alogrithm.leetcode.T105;
+package com.alogrithm.leetcode.T106;
 
 import com.alogrithm.leetcode.common.TreeNode;
 
@@ -14,26 +14,26 @@ public class Test {
     @org.junit.Test
     public void test1(){
         Main main=new Main();
-        int []preorder = {3,9,20,15,7};
         int []inorder = {9,3,15,20,7};
+        int []postorder = {9,15,7,20,3};
 
-        TreeNode root=main.buildTree(preorder,inorder);
-        preOrder(root);
-        System.out.println();
+        TreeNode root=main.buildTree(inorder,postorder);
         inOrder(root);
+        System.out.println();
+        postOrder(root);
         System.out.println();
 
     }
 
-    public void preOrder(TreeNode n){
+    public void postOrder(TreeNode n){
         if (n==null) return;
 
+
+        if(n.left!=null) postOrder(n.left);
+
+        if(n.right!=null) postOrder(n.right);
+
         System.out.print(n.val+" ");
-
-        if(n.left!=null) preOrder(n.left);
-
-        if(n.right!=null) preOrder(n.right);
-
     }
 
     public void inOrder(TreeNode n){
