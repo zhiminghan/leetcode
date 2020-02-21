@@ -1,5 +1,7 @@
 package com.alogrithm.leetcode.T1047;
 
+import org.junit.Assert;
+
 /**
  * @description:
  * @author: hanzhiming
@@ -8,4 +10,12 @@ package com.alogrithm.leetcode.T1047;
  */
 
 public class Test {
+
+    @org.junit.Test
+    public void test() {
+        Main main = new Main();
+        Assert.assertEquals("ca",main.removeDuplicates("abbaca"));
+    }
+
+
 }
