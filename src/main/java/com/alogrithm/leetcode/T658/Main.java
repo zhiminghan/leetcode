@@ -31,7 +31,6 @@ public class Main {
                 heap.add(num);
             }
         }
-
         while (!heap.isEmpty()){
 
             list.add(heap.poll());
